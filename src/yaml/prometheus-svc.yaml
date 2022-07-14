@@ -1,0 +1,29 @@
+kind: Service
+  metadata:
+    annotations:
+      prometheus.io/port: "8080"
+      prometheus.io/scrape: "true"
+    creationTimestamp: "2022-03-12T03:59:18Z"
+    labels:
+      app: httpserver
+    name: httpsvc
+    namespace: cloudnative
+    resourceVersion: "4037833"
+    uid: 98091bb2-33f4-4cc7-a48c-dfcf0ddcdfe7
+  spec:
+    clusterIP: 10.0.1.22
+    clusterIPs:
+      - 10.0.1.22
+    ipFamilies:
+      - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: httpserver
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
