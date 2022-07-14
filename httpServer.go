@@ -25,7 +25,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 	fmt.Println(r.RemoteAddr)
 	log.Printf("Success! Response code: %d", 200)
 	log.Printf("Success! clientip: %s", clientip)
-	fmt.Fprintln(w, "hello world")
+	fmt.Fprintln(w, "hello world hello")
 }
 func healthz(w http.ResponseWriter, r *http.Request) { fmt.Fprintf(w, "working") }
 func getCurrentIP(r *http.Request) string {
